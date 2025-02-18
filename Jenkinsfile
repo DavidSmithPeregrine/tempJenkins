@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'windows' // Ensure this runs on a Windows agent
+        label any // Ensure this runs on a Windows agent
     }
     stages {
         stage('Print Message') {
