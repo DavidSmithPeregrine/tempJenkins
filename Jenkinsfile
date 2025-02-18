@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label any // Ensure this runs on a Windows agent
-    }
+    any
     stages {
         stage('Print Message') {
             steps {
