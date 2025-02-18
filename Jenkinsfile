@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.13.2-alpine3.21' } }
+    agent {
+        label 'windows' // Ensure this runs on a Windows agent
+    }
     stages {
-        stage('build') {
+        stage('Print Message') {
             steps {
-                sh 'python --version'
+                bat 'echo Hello from Jenkins on Windows!'
             }
         }
     }
